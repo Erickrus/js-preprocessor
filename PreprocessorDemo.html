@@ -1,0 +1,41 @@
+<HTML>
+<TITLE>Scripting Interface</TITLE>
+<HEAD>
+<script language="javascript" src="System/String.js"></script>
+<script language="javascript" src="System/Console.js"></script>
+<script language="javascript" src="System/Scripting/Preprocess.js"></script>
+
+<script language="javascript">
+<!--
+
+function run() {
+   var cmd = document.getElementById("taCommandList").value;
+   cmd = scripting.preprocess(cmd);
+   Console.Clear();
+   eval(cmd);
+}
+function write1() {
+   var cmd = document.getElementById("taCommandList").value;
+   cmd = scripting.preprocess(cmd);
+   Console.Clear();
+   Console.Write(cmd);
+}
+
+//-->
+</script>
+
+</HEAD>
+<BODY>
+<H2>Javascript Scripting Interface - Console</H2>
+Please modify your script here<input type=button value="Run" onclick="javascript:run()"/>
+<input type=button value="Write" onclick="javascript:write1()"/><br>
+<br>
+Command Field:<br/>
+<textarea id="taCommandList" style="width:600px; height:100px">
+Console.Clear();
+Console.WriteLine("Hello World");
+</textarea><br/><br>
+Console:<br/>
+<textarea id="console" style="width:600px; height:150px"></textarea>
+</BODY>
+</HTML>
