@@ -1,5 +1,5 @@
 <HTML>
-<TITLE>Scripting Interface</TITLE>
+<TITLE>Javascript Preprocessor</TITLE>
 <HEAD>
 <script language="javascript" src="System/String.js"></script>
 <script language="javascript" src="System/Console.js"></script>
@@ -11,7 +11,7 @@
 function run() {
    var cmd = document.getElementById("taCommandList").value;
    cmd = scripting.preprocess(cmd);
-   Console.Clear();
+   //Console.Clear();
    eval(cmd);
 }
 function write1() {
