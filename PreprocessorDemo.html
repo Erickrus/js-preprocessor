@@ -11,7 +11,6 @@
 function run() {
    var cmd = document.getElementById("taCommandList").value;
    cmd = scripting.preprocess(cmd);
-   //Console.Clear();
    eval(cmd);
 }
 function write1() {
